@@ -8,6 +8,7 @@ body{
     margin: 0 auto; /* Centraliza o álbum na página */
     padding: 20px;
     background-color: bisque;
+    border-radius: 5px;
 }
 
 
