@@ -1,0 +1,47 @@
+/* Estilos gerais do álbum */
+body{
+    background-color: black;
+}
+
+.album {
+    max-width: 1000px; /* Limita a largura do álbum */
+    margin: 0 auto; /* Centraliza o álbum na página */
+    padding: 20px;
+    background-color: bisque;
+}
+
+
+
+
+.titulo{
+    text-align: center;
+    color: darkslategrey;
+}
+
+
+.grid {
+    display: grid; /* Ativa o layout em grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Define colunas responsivas */
+    gap: 20px; /* Espaçamento entre as imagens */
+}
+
+.grid img {
+    width: 100%; /* As imagens ocupam toda a largura da coluna */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Recorta a imagem para caber na coluna */
+    border: 2px solid darkorange; /* Borda opcional */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta o número de colunas em telas menores */
+    }
+}
+
+@media (max-width: 540px) {
+    .grid {
+        grid-template-columns: 1fr; /* Uma única coluna para telas muito pequenas */
+    }
+}
